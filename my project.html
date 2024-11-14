@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Instrument</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+    body {
+        
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        background-color: #1b1b32;
+        color: #f5f6f7;
+        font-family: Tahoma;
+       
+      }
+      
+      header{
+        margin: 1em auto;
+        text-align: center;
+        background-color: #f5f6f7;
+        color: #0a0a23;
+        height: 150px;
+        padding: center;
+        margin:auto;
+      }
+      
+      form {
+        width: 60vw;
+        max-width: 500px;
+        min-width: 300px;
+        margin: 0 auto;
+        padding-bottom: 2em;
+      }
+      
+      fieldset {
+        border: none;
+        padding: 2rem 0;
+        border-bottom: 3px solid #3b3b4f;
+      }
+      
+      fieldset:last-of-type {
+        border-bottom: none;
+      }
+      
+      label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      
+      input,
+      textarea,
+      select {
+        margin: 10px 0 0 0;
+        width: 100%;
+        min-height: 2em;
+      }
+      
+      input, textarea {
+        background-color: #0a0a23;
+        border: 1px solid #0a0a23;
+        color: #ffffff;
+      }
+      
+      .inline {
+        width: unset;
+        margin: 0 0.5em 0 0;
+        vertical-align: middle;
+      }
+      
+      input[type="submit"] {
+        display: block;
+        width: 60%;
+        margin: 1em auto;
+        height: 2em;
+        font-size: 1.1rem;
+        background-color: #3b3b4f;
+        border-color: white;
+        min-width: 300px;
+      }
+      
+      input[type="file"] {
+        padding: 1px 2px;
+      }
+      
+      .inline{
+        display: inline; 
+      }
+      .h{
+        tex
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+   <fieldset class="h"> <h1>Welcom to "My Instrument"</h1>
+    <p><i>Music is the refuge of the soul</i></p>
+  </fieldset>
+    </header>
+    <form method="post" action=''>
+      <fieldset>
+        <label for="name">Name</label><br>
+        <input id="name" name="name" type="text" required /><br>
+        <label for="surname">Surname</label><br>
+        <input id="surname" name="surname" type="text" required /><br>
+       <label>Type of Instrument<br>
+        <select id="instrument">
+            <option value="string">Stringed</option>
+            <option value="wind">To wind</option>
+            <option value="percu">Percussion</option>
+            <option value="key">Keyword</option>
+        </select>
+       </label><br>
+       <label>
+       <select id="sous-categorie">
+        
+       </select>
+       </label>
+       <script>
+        const instrumentSelect = document.getElementById('instrument');
+        const sousCategorieSelect = document.getElementById('sous-categorie');
+
+        const instruments = {
+          wind: ['flute', 'clarinet', 'saxophone', 'trumpet'],
+          string : ['violon','alto','bass','guitar','electric guitar'],
+          percu : ['Drums','djembe'],
+          key : ['Piano','Synthesizer']
+
+        };
+        instrumentSelect.addEventListener('change', () =>{
+          const selectedInstrument = instrumentSelect.value;
+          const options = instruments[selectedInstrument];
+
+          sousCategorieSelect.innerHTML = '';
+
+          options.forEach(option => {
+            const newOption = document.createElement('option');
+            newOption.value = option;
+            newOption.textContent = option;
+
+            sousCategorieSelect.appendChild(newOption);
+          });
+        });
+       </script>
+       <label>Color<br>
+        <select>
+            <option value="0">With</option>
+            <option value="1">Black</option>
+            <option value="2">Blue</option>
+            <option value="3">Red</option>
+        </select>
+       </label><br>
+       <label>Budget</label><br>
+       <input id="budget" name="budget" type="text" required /><br>
+      </fieldset>
+    <input type="submit" value="Submit" onclick="page2()">
+    </form>
+    <script>
+        function page2(){
+            window.location.href = "http://127.0.0.1:3000/Nouveau dossier/SCHOOL/HTML/next_page.html";
+        }
+    </script>
+  </body>
+</html>

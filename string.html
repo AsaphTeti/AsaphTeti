@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Instrument</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .bar{
+            background-color:#007ba1 ;
+            border: none;
+            height: auto;
+            width: auto;
+          
+        }
+        label{
+            color:#0a0a23;
+            margin: 5em auto;
+        text-align: center;
+        height: 150px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        
+        
+        }
+         .search{
+            background-color:#E0E0E0 ;
+            border: none;
+            height: 150px;
+            text-align: left center;
+            text-size-adjust: 200px;
+            
+         }
+         .a{
+            text-decoration: none;
+            color: black;
+            font-family: sans-serif;
+            position: relative;
+            top: 11px;
+            font-size: 18px;
+            margin-right: 10px;
+         }
+         .s{
+            border: none;
+            height: 50px;
+            width: 600px;
+            border-radius: 50px;
+            text-align: center;
+            position: absolute;
+            left: 700px;
+            top: 180px;
+         }
+         .b{
+            text-decoration: none;
+            color: black;
+            font-family: Tahoma;
+            position: relative;
+            top: 55px;
+            left: 50px;
+            font-size: 25px;
+            margin-right: 15px;
+         }
+         select{
+            border: none; 
+            position: absolute;
+            right: 100px;
+            top: 150px;
+            font-size: 25px;
+            border-radius: 5px;
+         }
+         .gallery {
+          display: flex;
+          flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+    footer{
+        border: 1em solid #E0E0E0;
+        height: 50px;
+        background-color: #E0E0E0;
+        text-align: center;
+          }
+          button{
+            position:absolute;
+            right: 620px;
+            top: 190px;
+            border-radius:50px;
+            font-size: 25px;
+          }
+          h2{
+            position: absolute;
+            right: 850px;
+            top: 75px;
+            font-family: tahoma;
+            font-size: 45px;
+          }
+          .image1{
+            background-color:beige;
+            border: none;
+            border-radius: 15px;
+          }
+          .a1{
+            text-decoration: none;
+            color:black;
+            
+          }
+          .p1{
+            font-size: 40px;
+            text-align: center;
+          }
+              </style>
+    </head>
+<body>
+    <fieldset class="bar">
+        <label><h1>Find your instruments</h1> </label> 
+    </fieldset>
+    <fieldset class="search">
+         <h2>My instrument</h2>
+        <a href="Service" class="a">Service  </a>
+        <a href="contact" class="a">   Contact us </a>
+        <a href="About Us" class="a">  About Us</a><br>
+        <a href="next_page.html" class="b">Keyword</a>
+        <a href="Service" class="b">String</a>
+        <a href="contact" class="b">Percussion</a>
+        <a href="wind" class="b">Wind</a>
+        <input class="s" placeholder="search your article"/><button type="submit">search</button>
+        <label class="langue">
+            <select>
+                <option value="french">French</option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+            </select>
+        </label>
+        
+    </fieldset>
+    <header>
+        <div class="gallery">
+           <fieldset class="image1">
+            <a href="" class="a1">
+              <img src="bass1.png">
+              <p class="p1">IBANEZ<br>50$</p>
+            </a>
+          </fieldset>
+          <fieldset class="image1">
+            <a href="" class="a1">
+            <img src="bass2.png">
+            <p class="p1">HAMAHA<br>150$</p>
+            </a>
+          </fieldset>
+           <fieldset class="image1">
+            <a href="" class="a1">
+            <img src="bass3.png">
+            <p class="p1">TECHNO<br>200$</p>
+          </a>
+          </fieldset>
+           <fieldset class="image1">
+            <a href="" class="a1">
+            <img src="bass4.png">
+            <p class="p1">IBANEZ<br>200$</p>
+          </a>
+          </fieldset>
+           <fieldset class="image1">
+            <a href="" class="a1">
+            <img src="bass5.png">
+            <p class="p1">CORT<br>270$</p>
+          </a>
+          </fieldset>
+           <fieldset class="image1">
+            <a href="" class="a1">
+            <img src="bass6.png">
+            <p class="p1">STANDARD BASS<br>170$</p>
+          </a>
+          </fieldset>
+            <fieldset class="image1">
+              <a href="" class="a1">
+                <img src="bass7.png">
+                <p class="p1">STANDARD BASS<br>170$</p>
+              </a>
+            </fieldset>
+        </div>
+    </header>
+    <footer>
+        ©2024 Myinstrument ( CG Solutions LLC )
+Privacy Policy | Terms of Use | FAQ's | Support
+    </footer>
+</body>
+</html>
